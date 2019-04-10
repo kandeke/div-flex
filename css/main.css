@@ -97,13 +97,14 @@ textarea {
 
 
 html {
-  background-color: #fff;
+  background-color: #56445D;
   height: 100%;
   width: 100%;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
   padding: 2em;
   font-size: 1.25em;
   height: 100%;
@@ -111,20 +112,21 @@ body {
 
 .wrapper {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
-  font-weight: 700;
+  align-items: center;
 }
 
 .div-1, .div-2, .div-3 {
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: #fff;
+  justify-content: center;
+  color: #DFE0E2;
   line-height: 1.5em;
   font-size: 1.6em;
-  background-color: #f16059;
-  height: 300px;
-  width: 30%;
+  background-color: #56445D;
+  height: auto;
+  /* width: 30%; */
 }
 
 
@@ -209,6 +211,17 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+@media all and (min-width: 1200px) {
+    .div-1, .div-2, .div-3 {
+        flex-basis: 30%;
+    }
+    
+    .div-1, .div-2 {
+        border-right: 1px solid #DFE0E2;
+        padding-right: 30px;
+    }
+}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
